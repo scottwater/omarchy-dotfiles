@@ -1,0 +1,42 @@
+# Omarchy environment (OMARCHY_PATH + PATH), needed even for non-interactive shells
+[[ -r /usr/share/omarchy/default/bash/env-bootstrap ]] && source /usr/share/omarchy/default/bash/env-bootstrap
+
+# If not running interactively, don't do anything else (leave this above the rc source)
+[[ $- != *i* ]] && return
+
+# All the default Omarchy aliases and functions
+# (don't mess with these directly, just overwrite them here!)
+source "$OMARCHY_PATH/default/bash/rc"
+
+# Add your own exports, aliases, and functions here.
+#
+# Make an alias for invoking commands you use constantly
+# alias p='python'
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+
+# Lerd
+export PATH="{{ .chezmoi.homeDir }}/.local/share/lerd/bin:$PATH"
+
+# Atuin shell integration (history capture/search for interactive Bash shells)
+eval "$(atuin init bash)"
+
+# Personal shortcuts
+unalias g 2>/dev/null
+g() {
+  if [[ $# -eq 0 ]]; then
+    git status -s
+  else
+    git "$@"
+  fi
+}
+
+alias lg='lazygit'
+alias la='command ls -A -l --color=auto'
+alias reload='source ~/.bashrc'
+alias hpa='lerd php artisan'
+
+# Use the local test runner for lt; preserve Omarchy's lta listing.
+if alias lt >/dev/null 2>&1; then
+  alias lta='eza --tree --level=2 --long --icons --git -a'
+  unalias lt
+fi

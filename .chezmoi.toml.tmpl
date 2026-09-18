@@ -1,0 +1,5 @@
+{{- $hardware := promptBoolOnce . "applyHardware" "Apply lendr's monitor, speaker tuning, and Dell haptic settings?" false -}}
+sourceDir = {{ .chezmoi.sourceDir | quote }}
+
+[data]
+applyHardware = {{ $hardware }}

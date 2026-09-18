@@ -1,0 +1,81 @@
+{
+  "aqua:modem-dev/hunk": [
+    {
+      "active": true,
+      "installed": true,
+      "requested_version": "latest",
+      "version": "0.22.0"
+    }
+  ],
+  "claude": [
+    {
+      "active": false,
+      "installed": true,
+      "version": "2.1.270"
+    },
+    {
+      "active": false,
+      "installed": true,
+      "version": "2.1.272"
+    },
+    {
+      "active": true,
+      "installed": true,
+      "requested_version": "latest",
+      "version": "2.1.273"
+    }
+  ],
+  "codex": [
+    {
+      "active": true,
+      "installed": true,
+      "requested_version": "latest",
+      "version": "0.154.0"
+    }
+  ],
+  "gh": [
+    {
+      "active": true,
+      "installed": true,
+      "requested_version": "latest",
+      "version": "2.100.0"
+    }
+  ],
+  "go": [
+    {
+      "active": true,
+      "installed": true,
+      "requested_version": "latest",
+      "version": "1.27.1"
+    }
+  ],
+  "node": [
+    {
+      "active": false,
+      "installed": true,
+      "version": "24.21.0"
+    },
+    {
+      "active": true,
+      "installed": true,
+      "requested_version": "26.8.1",
+      "version": "26.8.1"
+    }
+  ],
+  "npm:playwright": [
+    {
+      "active": true,
+      "installed": true,
+      "requested_version": "latest",
+      "version": "1.63.0"
+    }
+  ],
+  "pi": [
+    {
+      "active": true,
+      "installed": true,
+      "requested_version": "latest",
+      "version": "0.85.1"
+    }
+  ]
+}

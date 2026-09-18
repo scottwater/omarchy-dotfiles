@@ -1,0 +1,9 @@
+# Run omarchy-restart-xcompose to apply changes
+
+# Include fast emoji access
+include "/usr/share/omarchy/default/xcompose"
+
+# Identification
+<Multi_key> <space> <n> : "Scott Watermasysk"
+<Multi_key> <space> <e> : "scottwater@gmail.com"
+<Multi_key> <m> <a> <e> : "scott.watermasysk@mortgageautomator.com"

@@ -1,0 +1,10 @@
+# Required by the sh.lerd.glance entry in omarchy/shell.json.
+# Pinned to the clean checkout captured on lendr. Bump URL and checksum together.
+# No exact=true: leave local Git metadata and unrelated files alone.
+{{ if eq .chezmoi.os "linux" }}
+[".config/omarchy/plugins/sh.lerd.glance"]
+type = "archive"
+url = "https://github.com/lerd-env/lerd-omarchy-glance/archive/dc48c0fa8b75ddfb4526b53f4cb681c96be2197a.tar.gz"
+stripComponents = 1
+checksum.sha256 = "5487c1882695abd808539c932505f837f66b9135d265a6bfccb66ef2b0f7d54e"
+{{ end }}

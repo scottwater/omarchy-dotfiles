@@ -1,0 +1,12 @@
+# Backups and editor debris must not enter repository history.
+*.bak
+*.bak.*
+*.backup.*
+*.swp
+*.swo
+*.log
+.DS_Store
+.env
+.env.*
+# Local-only maintenance scratch space.
+.tmp/

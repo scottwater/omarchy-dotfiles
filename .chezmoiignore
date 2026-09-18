@@ -1,0 +1,63 @@
+# Repository documentation, inventory and explicit maintenance tools are not home files.
+README.md
+inventory/**
+scripts/**
+tests/**
+packages/**
+
+# Never capture application state or credentials by adding broad directories.
+.config/1Password/**
+.config/BraveSoftware/**
+.config/chromium/**
+.config/Codex/**
+.config/Slack/**
+.config/gh/**
+.config/chezmoi/**
+.config/hunk/state.json
+.config/herdr/logs/**
+.config/herdr/plugins/**
+.config/herdr/sessions/**
+.config/herdr/*.sock
+.config/herdr/*.json
+.config/lerd/services/**
+.config/containers/**
+.config/composer/vendor/**
+.config/composer/auth.json
+# Plugin code is restored from the pinned external archive, never its Git metadata.
+.config/omarchy/plugins/**/.git/**
+.config/omarchy/hooks/**/*.sample
+.config/omarchy/hooks/post-update.d/install-voxtype.hook
+.config/omarchy/hooks/post-update.d/setup-fingerprint.hook
+.config/omarchy/hooks/post-update.d/setup-agent.hook
+.config/omarchy/themed/*.sample
+.config/systemd/user/*.wants/**
+.config/systemd/user/*.requires/**
+.local/state/**
+.local/share/nvim/**
+.cache/**
+.ssh/**
+.gnupg/**
+.bash_history
+.claude.json
+**/*.bak
+**/*.bak.*
+**/*.backup.*
+**/*.log
+**/*.swp
+**/*.swo
+**/.DS_Store
+**/.git/**
+
+# These are this laptop's hardware choices, not defaults for another Omarchy host.
+{{ if not (get . "applyHardware" | default false) }}
+.config/hypr/monitors.lua
+.config/omarchy/dell-haptic.conf
+.config/pipewire/omarchy-speaker-tuning.conf
+.config/pipewire/omarchy-speaker-tuning.conf.d/**
+.config/systemd/user/omarchy-speaker-tuning.service
+{{ end }}
+
+# This repository is for Linux/Omarchy only.
+{{ if ne .chezmoi.os "linux" }}
+**
+{{ end }}

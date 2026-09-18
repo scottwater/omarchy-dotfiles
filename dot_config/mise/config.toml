@@ -1,0 +1,12 @@
+[tools]
+"aqua:modem-dev/hunk" = "latest"
+claude = "latest"
+codex = "latest"
+gh = "latest"
+go = "latest"
+node = "26.8.1"
+"npm:playwright" = "latest"
+pi = "latest"
+
+[settings.upgrade]
+auto_prune = false

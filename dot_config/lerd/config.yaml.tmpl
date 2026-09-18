@@ -1,0 +1,61 @@
+php:
+    default_version: "8.5"
+    xdebug_enabled: {}
+    extensions:
+        - imap
+    packages:
+        - bash
+    realised:
+        "8.3":
+            hash: 6a1db9e00b23d59714d4cd24f6f7f96844ecc8910797fed3149e2a0cfd1dca85
+            extensions:
+                - imap
+            packages:
+                - bash
+node:
+    default_version: "22"
+    managed: false
+    manager: fnm
+nginx:
+    http_port: 80
+    https_port: 443
+dns:
+    enabled: true
+    tld: test
+notifications:
+    target: native
+auto_cleanup: true
+parked_directories:
+    - {{ .chezmoi.homeDir }}/Lerd
+services:
+    mailpit:
+        enabled: true
+        image: docker.io/axllent/mailpit:latest
+        port: 1025
+        extra_ports: []
+    meilisearch:
+        enabled: true
+        image: ""
+        port: 7700
+        extra_ports: []
+    mysql:
+        enabled: true
+        image: ""
+        port: 3306
+        extra_ports: []
+        canonical_version: "8.4"
+    postgres:
+        enabled: true
+        image: ""
+        port: 5432
+        extra_ports: []
+    redis:
+        enabled: true
+        image: ""
+        port: 6379
+        extra_ports: []
+    rustfs:
+        enabled: true
+        image: docker.io/rustfs/rustfs:latest
+        port: 9000
+        extra_ports: []
