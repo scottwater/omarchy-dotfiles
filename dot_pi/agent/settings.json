@@ -1,0 +1,48 @@
+{
+  "lastChangelogVersion": "1.0.2",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-6-astra",
+  "defaultThinkingLevel": "medium",
+  "quietStartup": true,
+  "packages": [
+    "https://github.com/nicobailon/visual-explainer",
+    "https://github.com/calesennett/pi-codex-fast",
+    "npm:glimpseui",
+    "git:github.com/dbachelder/pi-btw",
+    "git:github.com/scottwater/pi-stoic",
+    "npm:sideshow",
+    "npm:@plannotator/pi-extension",
+    "npm:@tintinweb/pi-subagents",
+    "npm:@oipsanthony/pi-session-title"
+  ],
+  "theme": "omarchy-system",
+  "enabledModels": [
+    "openai-codex/gpt-6-luna",
+    "openai-codex/gpt-6.1-sol",
+    "openai-codex/gpt-6-astra",
+    "opencode-go/minimax-m3",
+    "opencode-go/qwen3.8-flash",
+    "opencode-go/deepseek-v4-flash",
+    "opencode-go/deepseek-v4-pro",
+    "opencode-go/glm-5.3",
+    "opencode-go/glm-5.3-flash",
+    "opencode-go/kimi-k3",
+    "opencode-go/minimax-m2.7",
+    "opencode-go/qwen3.8-max",
+    "opencode-go/muse-spark-1.3-contributor",
+    "opencode-go/deepseek-v4.1-flash",
+    "xai/grok-4.7"
+  ],
+  "pi-codex-fast": {
+    "enabled": false
+  },
+  "powerline": "default",
+  "workingVibe": "zen",
+  "transport": "auto",
+  "tuiMode": "regular",
+  "steeringMode": "all",
+  "deviceId": "82716981-fd16-483b-8b05-e7cfb827714e",
+  "extensions": [
+    "-builtin:mcp"
+  ]
+}
