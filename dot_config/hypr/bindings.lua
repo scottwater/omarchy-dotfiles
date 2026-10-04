@@ -48,3 +48,19 @@ do
   update_cancel_binding()
   hl.timer(update_cancel_binding, { timeout = 50, type = "repeat" })
 end
+
+-- Omasnap replaces Omarchy's Print screenshot action.
+hl.unbind("PRINT")
+hl.unbind("F12")
+hl.unbind("ALT + SHIFT + 4")
+
+o.bind("PRINT", "Screenshot", "omasnap")
+o.bind("F12", "Screenshot", "omasnap")
+o.bind("ALT + SHIFT + 4", "Screenshot", "omasnap")
+
+hl.layer_rule({
+  match = { namespace = "^omasnap$" },
+  no_anim = true,
+  animation = "none",
+  no_screen_share = true,
+})
