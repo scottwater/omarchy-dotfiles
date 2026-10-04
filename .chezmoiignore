@@ -10,6 +10,10 @@ packages/**
 .config/BraveSoftware/**
 .config/chromium/**
 .config/Codex/**
+.codex/**
+.claude/**
+.pi/agent/auth.json
+.pi/agent/sessions/**
 .config/Slack/**
 .config/gh/**
 .config/chezmoi/**
@@ -21,7 +25,12 @@ packages/**
 .config/herdr/sessions/**
 .config/herdr/*.sock
 .config/herdr/*.json
-.config/lerd/services/**
+# Lerd mixes preferences with calculated container state; keep it app-owned.
+.config/lerd/**
+# Browser flags, MIME associations and autostart entries are installer/app-owned.
+.config/chromium-flags.conf
+.config/mimeapps.list
+.config/autostart/**
 .config/containers/**
 .config/composer/vendor/**
 .config/composer/auth.json
@@ -36,6 +45,10 @@ packages/**
 .config/systemd/user/*.requires/**
 .local/state/**
 .local/share/nvim/**
+.local/share/atuin/**
+.local/share/opencode/**
+# Empty, app-owned notification state; no preferences to restore.
+.config/fcitx5/conf/notifications.conf
 .cache/**
 .ssh/**
 .gnupg/**

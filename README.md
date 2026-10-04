@@ -11,14 +11,13 @@ package removals, service changes, or `exact_` directories in this repository.
 
 - Bash startup files and shortcuts, XCompose, Git and mise configuration.
 - Hyprland user entry points/overrides, Omarchy shell preferences and agent choice.
-- Alacritty, Foot, Ghostty, Kitty, tmux, Starship, imv and Chromium flags.
+- Alacritty, Foot, Ghostty, Kitty, tmux, Starship and imv.
 - Neovim configuration and `lazy-lock.json`, including the generated-theme symlink
   as a **symlink**, not its target's contents.
-- Personal `lt` and `nvim-ruby-lsp` scripts.
+- Personal `lt`, `nvim-ruby-lsp` and `mise_update_now` scripts.
 - Zed settings, Linux keybindings, tasks and debug configurations.
 - Voxtype configuration, clipboard helper and service definition.
 - Atuin, Herdr, OpenCode, btop, input-method and desktop preferences.
-- Lerd's main configuration (including its current calculated fields; see below).
 - Optional laptop-specific monitor, Dell haptic and speaker-tuning configuration.
 - The Lerd shell widget as a checksum-verified, commit-pinned external archive.
 - Per-host package/tool/service inventories under `inventory/`.
@@ -42,11 +41,10 @@ chezmoi diff
 it is not a command to save those edits. Review the source repository's Git diff
 before committing and pushing.
 
-Four files have home-directory templates so another username works:
+Three files have home-directory templates so another username works:
 
 - `~/.bashrc`
 - `~/.config/voxtype/config.toml`
-- `~/.config/lerd/config.yaml`
 - `~/.config/gtk-3.0/bookmarks`
 
 For those, edit with `chezmoi edit <path>`, review `chezmoi diff <path>`, then
@@ -55,7 +53,9 @@ preserve the template expressions. Do not blanket re-add templates or recursivel
 add `~/.config`.
 
 After an Omarchy update, inspect any differences before applying. Keep useful
-migrations instead of restoring the old source over them.
+migrations instead of restoring the old source over them. A live difference is
+not necessarily a preference you chose: apps and installers also rewrite files.
+Capture only changes you recognize and want to reproduce.
 
 ## Package and service inventory
 
@@ -133,12 +133,10 @@ on this host. Keep the `Omazed` theme selected; its generated theme file and
 installer-owned hook are not managed by Chezmoi. On a new host with Zed and
 Omazed already installed, run `omazed setup` once before applying these settings.
 
-`lerd/config.yaml` contains both preferences and calculated state (`php.realised`
-and resolved versions). It is initially captured faithfully, with only the home
-path templated. Review that section on a fresh machine; let Lerd rebuild images
-and regenerate deployment files rather than assuming cached image hashes exist.
-`lerd install` is its one-time setup command; run the installer/setup deliberately,
-then reconcile any configuration changes. Project `.lerd.yaml`, `.env`, database
+Lerd's configuration is not managed here. It mixes preferences with calculated
+container state (`php.realised`, image hashes and resolved versions). Let Lerd
+create its configuration and rebuild images on each host. `lerd install` is its
+one-time setup command; run it deliberately. Project `.lerd.yaml`, `.env`, database
 volumes and project files are not included here.
 
 The Lerd widget is pinned in `.chezmoiexternal.toml`. Updating it requires changing
@@ -150,8 +148,12 @@ Lerd service/container output, tool-launcher wrappers and Herdr-generated agent
 integrations are not dotfiles to replay. Regenerate them through their installers.
 The Lerd phpMyAdmin definition and generated containers contain credential fields
 and are intentionally excluded. Recover credentials through a password manager or
-encrypted backup, not this repository. Some MIME handlers similarly depend on
-launchers supplied by application installers.
+encrypted backup, not this repository.
+
+MIME associations, Chromium flags and autostart entries are also unmanaged:
+apps and installers maintain them, and some entries depend on host-local launchers.
+Chromium flags can include OAuth credentials. Configure browser defaults and
+login startup through the applications on each host instead.
 
 Atuin's existing dotfiles feature setting is preserved, not enabled by this repo.
 Avoid configuring it to compete with chezmoi for the same settings.
