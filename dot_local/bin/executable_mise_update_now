@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Upgrade one mise-managed app without the usual release-age wait.
+set -euo pipefail
+
+if [[ $# -eq 1 && ( $1 == --help || $1 == -h ) ]]; then
+  printf 'Usage: mise_update_now <app>\nExample: mise_update_now pi\n'
+  exit 0
+fi
+
+if [[ $# -ne 1 || -z ${1:-} || ${1:-} == -* ]]; then
+  printf 'Usage: mise_update_now <app>\n' >&2
+  exit 2
+fi
+
+exec mise upgrade "$1" --minimum-release-age=1s
