@@ -15,6 +15,7 @@ package removals, service changes, or `exact_` directories in this repository.
 - Neovim configuration and `lazy-lock.json`, including the generated-theme symlink
   as a **symlink**, not its target's contents.
 - Personal `lt` and `nvim-ruby-lsp` scripts.
+- Zed settings, Linux keybindings, tasks and debug configurations.
 - Voxtype configuration, clipboard helper and service definition.
 - Atuin, Herdr, OpenCode, btop, input-method and desktop preferences.
 - Lerd's main configuration (including its current calculated fields; see below).
@@ -120,6 +121,17 @@ Do not use unattended apply/update. Each machine should capture and push its
 intentional edits before receiving changes from the other.
 
 ## Lerd and generated integrations
+
+Zed keeps the Mac editor preferences with Ctrl shortcuts and the installed
+JetBrains Mono Nerd Font. Local telemetry and agent-server settings are preserved.
+The Ruby and Colored Zed Icons extensions install automatically. The CodeRabbit
+task needs its CLI; Open Worktree needs a project's `bin/wt` script.
+
+Omarchy's Zed installer (`omarchy install editor zed`) installs Omazed and runs
+`omazed setup` to register automatic theme switching. That setup already exists
+on this host. Keep the `Omazed` theme selected; its generated theme file and
+installer-owned hook are not managed by Chezmoi. On a new host with Zed and
+Omazed already installed, run `omazed setup` once before applying these settings.
 
 `lerd/config.yaml` contains both preferences and calculated state (`php.realised`
 and resolved versions). It is initially captured faithfully, with only the home

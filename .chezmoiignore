@@ -14,6 +14,8 @@ packages/**
 .config/gh/**
 .config/chezmoi/**
 .config/hunk/state.json
+# Omazed regenerates this on theme changes.
+.config/zed/themes/omazed.json
 .config/herdr/logs/**
 .config/herdr/plugins/**
 .config/herdr/sessions/**

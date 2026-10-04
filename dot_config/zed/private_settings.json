@@ -1,0 +1,102 @@
+{
+  "preview_tabs": {
+    "enabled": false
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "default_open_behavior": "new_window",
+  "cli_default_open_behavior": "new_window",
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "terminal": {
+    "font_size": 20.0
+  },
+  "colorize_brackets": true,
+  "sticky_scroll": {
+    "enabled": true
+  },
+  "git": {
+    "hunk_style": "staged_hollow"
+  },
+  "collaboration_panel": {
+    "dock": "left",
+    "button": false
+  },
+  "outline_panel": {
+    "button": false,
+    "dock": "right"
+  },
+  "git_panel": {
+    "dock": "left",
+    "button": true,
+    "collapse_untracked_diff": true,
+    "scrollbar": {
+      "show": "never"
+    }
+  },
+  "scrollbar": {
+    "show": "never"
+  },
+  "icon_theme": "Colored Zed Icons Theme Dark",
+  "project_panel": {
+    "sort_mode": "mixed",
+    "default_width": 200.0,
+    "starts_open": true,
+    "git_status": true,
+    "hide_hidden": false,
+    "hide_root": true,
+    "entry_spacing": "standard",
+    "dock": "left",
+    "auto_fold_dirs": true,
+    "auto_reveal_entries": true,
+    "scrollbar": {
+      "show": "never"
+    }
+  },
+  "ui_font_size": 18.0,
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 20,
+  "theme": "Omazed",
+  "languages": {
+    "Ruby": {
+      "language_servers": [
+        "ruby-lsp"
+      ]
+    }
+  },
+  "lsp": {
+    "rubocop": {
+      "initialization_options": {
+        "safeAutocorrect": false
+      }
+    }
+  },
+  "file_scan_exclusions": [
+    ".worktrees/",
+    "*.log",
+    ".conductor/",
+    ".branches/"
+  ],
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry"
+    },
+    "claude-acp": {
+      "type": "registry"
+    }
+  },
+  "auto_install_extensions": {
+    "colored-zed-icons-theme": true,
+    "ruby": true
+  }
+}

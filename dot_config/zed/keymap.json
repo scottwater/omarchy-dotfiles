@@ -1,0 +1,123 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-shift-g": [
+        "task::Spawn",
+        {
+          "task_name": "LazyGit",
+          "reveal_target": "center"
+        }
+      ],
+      "ctrl-shift-c": [
+        "task::Spawn",
+        {
+          "task_name": "CodeRabbit",
+          "reveal_target": "center"
+        }
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-shift-x": null
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-x": "editor::DeleteLine"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-1": [
+        "pane::ActivateItem",
+        0
+      ]
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-2": [
+        "pane::ActivateItem",
+        1
+      ]
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-3": [
+        "pane::ActivateItem",
+        2
+      ]
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-4": [
+        "pane::ActivateItem",
+        3
+      ]
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-5": [
+        "pane::ActivateItem",
+        4
+      ]
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-6": [
+        "pane::ActivateItem",
+        5
+      ]
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-7": [
+        "pane::ActivateItem",
+        6
+      ]
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-8": [
+        "pane::ActivateItem",
+        7
+      ]
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-9": [
+        "pane::ActivateItem",
+        8
+      ]
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-shift-alt-left": "pane::SplitAndMoveLeft",
+      "ctrl-shift-alt-right": "pane::SplitAndMoveRight",
+      "ctrl-shift-alt-up": "pane::SplitAndMoveUp",
+      "ctrl-shift-alt-down": "pane::SplitAndMoveDown"
+    }
+  }
+]
