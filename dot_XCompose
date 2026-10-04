@@ -7,3 +7,6 @@ include "/usr/share/omarchy/default/xcompose"
 <Multi_key> <space> <n> : "Scott Watermasysk"
 <Multi_key> <space> <e> : "scottwater@gmail.com"
 <Multi_key> <m> <a> <e> : "scott.watermasysk@mortgageautomator.com"
+
+# Project paths
+<Multi_key> <s> <t> <l> : "storage/logs/tests.log"
