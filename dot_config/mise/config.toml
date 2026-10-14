@@ -12,5 +12,8 @@ pi = "latest"
 [settings.upgrade]
 auto_prune = false
 
+[settings]
+minimum_release_age_excludes = ["claude", "codex", "pi"]
+
 [env]
 CHROME_EXECUTABLE = "/usr/bin/google-chrome-stable"
