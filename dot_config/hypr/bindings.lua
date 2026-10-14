@@ -74,3 +74,8 @@ hl.bind("CTRL + SHIFT + 2", hl.dsp.global("com.t3tools.T3Code:capture-window"))
 -- omarchy-pi: floating chat with the persistent pi daemon.
 hl.unbind("SUPER + SHIFT + SPACE")
 o.bind("SUPER + SHIFT + SPACE", "Pi chat", "omarchy-shell shell toggle hjanuschka.omarchy-pi")
+
+-- Caps group selection: extend the stock 1-5 bindings to 6-9.
+for index = 6, 9 do
+  o.bind("SUPER + ALT + code:" .. tostring(index + 9), "Switch to group window " .. index, hl.dsp.group.active({ index = index }))
+end
