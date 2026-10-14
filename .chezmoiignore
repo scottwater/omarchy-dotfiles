@@ -12,6 +12,9 @@ packages/**
 .config/Codex/**
 .codex/**
 .claude/**
+# Shared agent instructions; ~/.claude/CLAUDE.md links to ~/.config/AGENTS.md.
+!.claude
+!.claude/CLAUDE.md
 .pi/agent/auth.json
 .pi/agent/sessions/**
 .config/Slack/**

@@ -18,6 +18,8 @@ package removals, service changes, or `exact_` directories in this repository.
 - Zed settings, Linux keybindings, tasks and debug configurations.
 - Voxtype configuration, clipboard helper and service definition.
 - Atuin, Herdr, OpenCode, btop, input-method and desktop preferences.
+- Shared agent instructions in `~/.config/AGENTS.md`, with `~/.claude/CLAUDE.md`
+  as a symlink to it.
 - Optional laptop-specific monitor, Dell haptic and speaker-tuning configuration.
 - The Lerd shell widget as a checksum-verified, commit-pinned external archive.
 - Per-host package/tool/service inventories under `inventory/`.
