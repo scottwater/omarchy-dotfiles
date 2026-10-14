@@ -6,7 +6,7 @@
   },
   "bar": {
     "position": "top",
-    "transparent": true,
+    "transparent": false,
     "centerAnchor": "omarchy.clock",
     "layout": {
       "left": [
@@ -14,7 +14,12 @@
           "id": "omarchy.menu"
         },
         {
-          "id": "omarchy.workspaces"
+          "id": "tornikegomareli.spaces",
+          "maxIcons": 4,
+          "persistentWorkspaces": 3,
+          "iconStyle": "color",
+          "hideEmpty": false,
+          "labelStyle": "number"
         }
       ],
       "center": [
@@ -42,7 +47,8 @@
           "id": "omarchy.tray"
         },
         {
-          "id": "sh.lerd.glance"
+          "id": "sh.lerd.glance",
+          "view": "table"
         },
         {
           "id": "omarchy.tailscale"
