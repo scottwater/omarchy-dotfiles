@@ -66,3 +66,11 @@ hl.layer_rule({
 })
 
 hl.bind("CTRL + SHIFT + 2", hl.dsp.global("com.t3tools.T3Code:capture-window"))
+
+
+
+
+
+-- omarchy-pi: floating chat with the persistent pi daemon.
+hl.unbind("SUPER + SHIFT + SPACE")
+o.bind("SUPER + SHIFT + SPACE", "Pi chat", "omarchy-shell shell toggle hjanuschka.omarchy-pi")

@@ -74,5 +74,9 @@
       ]
     }
   },
-  "plugins": []
+  "plugins": [
+    {
+      "id": "hjanuschka.omarchy-pi"
+    }
+  ]
 }
